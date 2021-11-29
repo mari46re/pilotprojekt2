@@ -1,5 +1,7 @@
 .DS_Store
 video/
+lyd/
+klip/
 *.mp4
 *.psd
 *.mov
