@@ -18,40 +18,85 @@
           <li><a href="index.html#second_section">Filmen</a></li>
           <li><a href="index.html#third_section">Historien</a></li>
           <li><a href="index.html#fourth_section">Galleri</a></li>
-          <li><a href="index.html#fifth_section">Layoutdiagram</a></li>
+          <li><a href="layout.html">Layoutdiagram</a></li>
           <li><a href="styletile.html">Styletile</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section id="first_section">
-        <h1>Emil elsker <br /><span id="united">United</span></h1>
+        <div id="tekst">
+          <h1>Emil <br />elsker <br />United</h1>
+        </div>
       </section>
       <section id="second_section">
-        <h2>Filmen</h2>
+        <div class="section_wrapper">
+          <h2>Filmen</h2>
+          <div class="content">
+            <video
+              controls
+              src="https://mariksen.dk/kea/05_indhold/pilotprojekt.mp4"
+            ></video>
+          </div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/iKjXt0hh2es"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
       </section>
       <section id="third_section">
-        <h2>Historien</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          venenatis tincidunt est, ut dignissim eros volutpat a. Ut pretium, ex
-          a tempus fringilla, massa mauris varius lectus, vitae lobortis nisl
-          lacus sit amet arcu. Pellentesque consequat condimentum congue.
-          Quisque iaculis rutrum tortor. Nunc interdum luctus arcu, hendrerit
-          dignissim justo iaculis non. Suspendisse a pulvinar lorem, a aliquet
-          ipsum. Ut nec accumsan sem. Sed condimentum risus eu mollis lobortis.
-          Pellentesque a pulvinar est. Proin tempor dapibus viverra. Praesent
-          nec velit mauris. Vestibulum molestie quis tortor non convallis.
-          Mauris at neque non lorem aliquam tempus tristique non orci.
-        </p>
+        <div class="section_wrapper">
+          <img src="/billeder/billede4.jpg" alt="kasket" />
+
+          <div class="content">
+            <h2>Historien</h2>
+            <p>
+              Emil er en ung mand på 24 år, der har dedikeret en stor del af sit
+              hjerte til den engelske fodboldklub Manchester United.
+              <br />
+              <br />Dedikationen afspejles i hans værelse og hans tøjvalg, men
+              gennemsyrer også hans telefon, via. Bl.a. fodboldmedier, podcasts,
+              baggrund mm. Det er ikke længe siden Emil kom hjem fra en
+              fodboldrejse til England, hvor han så klubben spille kamp hele to
+              gange på drømmeholdets stadion Old Trafford i Manchester. <br />
+              <br />
+              Klubben har historisk set mange succeser og storsejrer, men Emil
+              har aldrig oplevet nogle af disse som fan. Siden år 2013, hvor sir
+              Alex Fergusen stoppede som træner i klubben, er det gået ned af
+              bakke. På trods af det, støtter han holdet og hepper og tror på
+              deres nedtur snart vender!
+            </p>
+          </div>
+        </div>
       </section>
       <section id="fourth_section">
-        <h2>Galleri</h2>
-      </section>
-      <section id="fifth_section">
-        <h2>Layoutdiagram</h2>
+        <div class="section_wrapper">
+          <h2>Galleri</h2>
+          <div id="galleri">
+            <div id="img2">
+              <img src="billeder/billede2.jpg" alt="billede2" />
+            </div>
+            <div id="img1">
+              <img src="billeder/billede1.jpg" alt="billede1" />
+            </div>
+
+            <div id="img3">
+              <img src="billeder/billede3.jpg" alt="billede3" />
+            </div>
+            <div id="img4">
+              <img src="billeder/billede5.jpg" alt="billede4" />
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>
-  <footer></footer>
+  <footer>
+    <p>Lavet af Marikka</p>
+  </footer>
 </html>

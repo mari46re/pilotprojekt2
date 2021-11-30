@@ -1,10 +1,14 @@
-#second_section,
-#third_section,
-#fourth_section,
-#fifth_section,
-#styletile {
-  margin-right: 15em;
-  margin-left: 15em;
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  margin: 0;
 }
 
 body,
@@ -18,14 +22,23 @@ p {
   font-style: normal;
 }
 
-/*Styling af navigationen*/
+/*-------Video styling-------*/
+video {
+  width: 100%;
+}
+
+iframe {
+  aspect-ratio: 16/9;
+  padding-block: 1rem;
+}
+
+/*-------Styling af navigationen---------*/
 header {
   position: sticky;
   top: 0;
   width: auto;
   height: auto;
   padding: 0.5rem;
-  z-index: 1;
 }
 
 header nav ul {
@@ -40,7 +53,18 @@ header nav ul {
   font-style: normal;
 }
 
-/*Styling af links i styletile*/
+/*-----------Styling af links i styletile-----------*/
+
+#styletile {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 1000px) 1fr;
+}
+
+#styletile .section_wrapper {
+  grid-column: 2;
+}
+
+/*-----------Links, der skal ligge på linje uden nogle list-style(punkter)-----------*/
 #links {
   font-family: balboa-plus-fill, sans-serif;
   font-weight: 400;
@@ -61,7 +85,11 @@ h3 {
 }
 
 h1 {
-  font-size: 4.7em;
+  font-size: 6em;
+}
+
+div#tekst {
+  grid-column: 2;
 }
 
 h2 {
@@ -77,27 +105,87 @@ a:hover {
   color: #fbe122;
 }
 
+/*-----------sektionerne i index.html-----------*/
 #first_section {
   width: 100%;
-  height: 100vh;
-  background-image: url(splash2.png);
+  height: auto;
+  aspect-ratio: 16/9;
+  background-image: url(splash3.jpg);
   background-size: cover;
   display: grid;
-  justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-content: center;
 }
 
-h1 {
+#second_section {
   display: grid;
-  position: absolute;
-  top: 50%;
-  left: 65%;
+  grid-template-columns: 1fr minmax(auto, 1000px) 1fr;
 }
 
-#united {
-  font-size: 2em;
-  color: #fbe122;
+#third_section {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 1000px) 1fr;
+  color: #fff;
+  background-color: #da291c;
+  padding: 2rem 1rem;
 }
 
+#fourth_section {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 1000px) 1fr;
+}
+/*-----------section_wrapperne skal altid starte i den kolonne to, som vi har defineret ovenfor-----------*/
+
+#second_section .section_wrapper {
+  grid-column: 2;
+}
+
+#third_section .section_wrapper {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+#fourth_section .section_wrapper {
+  grid-column: 2;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#galleri {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+  gap: 10px;
+}
+
+#img2 {
+  grid-column: 1/2;
+  /* grid-row: 1; */
+}
+
+#img1 {
+  grid-column: 1/2;
+  /* grid-row: 2; */
+}
+
+#img3 {
+  grid-column: 2/3;
+  /* grid-row: 1/2; */
+}
+#img4 {
+  grid-column: 2/3;
+  /* grid-row: 1/2; */
+}
+
+/*-----------h2 i tredje sektion skal være hvid, fordi baggrunden er rød-----------*/
+#third_section h2 {
+  color: #fff;
+}
+
+/*-----------Disse farver optræder i styleTile-----------*/
 .color {
   height: 50px;
   width: 50px;
@@ -118,8 +206,31 @@ h1 {
 }
 
 @media (max-width: 700px) {
-  main {
-    margin-right: 2em;
-    margin-left: 2em;
+  #second_section,
+  #third_section,
+  #fourth_section,
+  #layout,
+  #styletile {
+    margin-right: 1em;
+    margin-left: 1em;
   }
+
+  #third_section .section_wrapper {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  video {
+    width: 75%;
+  }
+
+  /* #gallery {
+    grid-template-columns: 1fr;
+  } */
 }
